@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transfer</title>
+    
+	<style>
+		body {
+			background-color: #E9EDEF;
+			background-size: auto;
+			background-image: url("background.png");
+			background-position: center;
+			
+		}
+		img.logo {
+			display: block;
+			margin: 0 auto;
+		}
+		.container {
+			max-width: 500px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.container input[type="text"], .container input[type="password"], .container input[type="number"], .container select {
+			width: 100%;
+			height: 50px;
+			padding: 10px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			opacity: 0.5;
+		}
+		.container input[type="submit"] {
+			background-color: #527694;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		h1 {
+			color: #d1d1d1;
+			font-size: medium;
+			transform: translateY(-160%);
+		}
+		.btn:hover{
+			background-color: #33495c;
+		}
+	</style>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head<body>
+	<header>
+		<img src="LOGO_ROAA.jpg" alt="Logo" class="logo"/>
+		<h1><center>The Art Of Easy Banking</center></h1>
+        <h1><center>Transfer</center></h1>
+	</header>
+	<div class="container">
+        <form method="post" onsubmit="a()">
+			<input type="text" placeholder="Enter Receiptant Name" id="fullname" name="fullname" required>
+            <input type="number" placeholder="Receiptant Account Number" id="ssn" name="ssn" required>
+			<input type="number" placeholder="Enter Amount" id="age" name="age" required>
+			<input type="text" placeholder="Enter Reason" id="address" name="address" required>
+            <select name="bill" id="bill" required>      
+				<option value="" selected disabled>Select Type</option>
+				<option value="male">internal</option>
+				<option value="female">domestic</option>
+                <option value="int">international</option>
+            </select>
+            <input type="number" placeholder="Enter Swift Code if applicable" id="sc" name="sc">
+            <input type="number" placeholder="Enter IBAN if applicable" id="ib" name="ib">
+			<input type="submit" class="submit">
+		</form>
+	</div>
+    <ul class="button-list">
+		<button class="btn" onclick="location.href='client.html'">Back to home</button>
+	</ul>
+    <script>
+        function a(){
+            event.preventDefault();
+            var fullname = document.getElementById("fullname").value;
+            var type = document.getElementById("bill").value;
+			var age = document.getElementById("age").value;
+			var address = document.getElementById("address").value;
+			var ssn = document.getElementById("ssn").value;
+            var sc = document.getElementById("sc").value;
+            var ib = document.getElementById("ib").value;
+        if (type === "" || fullname === "" || age === "" || address === "" ||ssn === "") {
+				alert("Please fill out all fields");
+        }else{
+            if(type === "int" && sc === "" && ib === ""){
+                alert("Please fill out all fields");
+            }else{
+            alert("Done");
+            window.location.href = "client.html";
+            }
+        }
+        }
+    </script>
+</body>
+</html>
