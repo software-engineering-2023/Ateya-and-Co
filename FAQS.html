@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="sideBar.css" />
+    <link rel="stylesheet" href="FAQs.css" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="BigBoss">
+      <div id="sideBar">
+        <div id="logoCon">
+          <img id="logo" src="LOGO ROAA.png" />
+        </div>
+        <div class="sideBarItem">
+          <img class="allIcons" src="homeIcon.png" />
+          <a href="main.html">Home</a>
+        </div>
+        <div class="sideBarItem">
+          <img class="allIcons" src="technicalIssueIcon.png" />
+          <a href="techIssue.html">Technical Issues</a>
+        </div>
+        <div class="sideBarItem">
+          <img class="allIcons" src="FAQIcon.png" />
+          <a href="FAQS.html">FAQs</a>
+        </div>
+        <div class="sideBarItem">
+          <img class="allIcons" src="UsersIcon.png" />
+          <a href="Accounts.html">Accounts</a>
+        </div>
+
+        <div class="sideBarItem">
+          <img class="allIcons" src="logOutIcon.png" />
+          <a href="login.html">Logout</a>
+        </div>
+      </div>
+      <div class="faqCards">
+        <div>
+          <div id="FAQText">Frequently asked questions:</div>
+          <div>
+            <button id="create" onclick="createNew()" class="create">
+              create New Question
+            </button>
+          </div>
+        </div>
+        <div id="allCards">
+          <div class="card" id="card1">
+            <div class="cardBody">
+              <div class="Issue" id="issue1">
+                What are the minimum balance requirements?
+              </div>
+              <div class="Answer" id="answer1">Two hundred pounds.</div>
+              <div class="Actions">
+                <button id="resolve1" onclick="resolveCard1()" class="resolve">
+                  edit
+                </button>
+                <button id="ignore1" onclick="ignoreCard1()" class="ignore">
+                  delete
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="card2">
+            <div class="cardBody">
+              <div class="Issue" id="issue2">Can I use an ATM for free?</div>
+              <div class="Answer" id="answer2">
+                yes sure,no fees for withdrawal.
+              </div>
+              <div class="Actions">
+                <button id="resolve2" onclick="resolveCard2()" class="resolve">
+                  edit
+                </button>
+                <button id="ignore2" onclick="ignoreCard2()" class="ignore">
+                  delete
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="card3">
+            <div class="cardBody">
+              <div class="Issue" id="issue3">
+                Will it cost me to transfer money?
+              </div>
+              <div class="Answer" id="answer3">
+                No,all domestic transiction are for free.
+              </div>
+              <div class="Actions">
+                <button id="resolve3" onclick="resolveCard3()" class="resolve">
+                  edit
+                </button>
+                <button id="ignore3" onclick="ignoreCard3()" class="ignore">
+                  delete
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="card4">
+            <div class="cardBody">
+              <div class="Issue" id="issue4 ">What’s the interest rate?</div>
+              <div class="Answer" id="answer4">Fifteen percent.</div>
+              <div class="Actions">
+                <button id="resolve4" onclick="resolveCard4()" class="resolve">
+                  edit
+                </button>
+                <button id="ignore4" onclick="ignoreCard4()" class="ignore">
+                  delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="popup1" class="popup">
+      <div>
+        <div>Question:</div>
+        <textarea id="textbox1"></textarea>
+      </div>
+      <div>Answer:</div>
+      <textarea id="textbox11"></textarea>
+      <div>
+        <button onclick="editCard1()">Submit</button>
+        <button onclick="closePopup1()">Close</button>
+      </div>
+    </div>
+
+    <div id="popup2" class="popup">
+      <div>
+        <div>Question:</div>
+        <textarea id="textbox2"></textarea>
+      </div>
+      <div>Answer:</div>
+      <textarea id="textbox22"></textarea>
+      <div>
+        <button onclick="editCard2()">Submit</button>
+        <button onclick="closePopup2()">Close</button>
+      </div>
+    </div>
+    <div id="popup3" class="popup">
+      <div>
+        <div>Question:</div>
+        <textarea id="textbox3"></textarea>
+      </div>
+      <div>Answer:</div>
+      <textarea id="textbox33"></textarea>
+      <div>
+        <button onclick="editCard3()">Submit</button>
+        <button onclick="closePopup3()">Close</button>
+      </div>
+    </div>
+    <div id="popup4" class="popup">
+      <div>
+        <div>Question:</div>
+        <textarea id="textbox4"></textarea>
+      </div>
+      <div>Answer:</div>
+      <textarea id="textbox44"></textarea>
+      <div>
+        <button onclick="editCard4()">Submit</button>
+        <button onclick="closePopup4()">Close</button>
+      </div>
+    </div>
+    <div id="popup5" class="popup">
+      <div>
+        <div>Question:</div>
+        <textarea id="textbox5"></textarea>
+      </div>
+      <div>Answer:</div>
+      <textarea id="textbox55"></textarea>
+      <div>
+        <button onclick="editCard5()">Submit</button>
+        <button onclick="closePopup5()">Close</button>
+      </div>
+    </div>
+    <div id="popupnew" class="popup">
+      <div>
+        <div>Question:</div>
+        <textarea id="textboxnew"></textarea>
+      </div>
+      <div>Answer:</div>
+      <textarea id="textboxnew2"></textarea>
+      <div>
+        <button onclick="createCardnew()">Submit</button>
+        <button onclick="closePopupnew()">Close</button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    function ignoreCard1() {
+      document.getElementById("card1").style.display = "none";
+    }
+    function ignoreCard2() {
+      document.getElementById("card2").style.display = "none";
+    }
+    function ignoreCard3() {
+      document.getElementById("card3").style.display = "none";
+    }
+    function ignoreCard4() {
+      document.getElementById("card4").style.display = "none";
+    }
+    function resolveCard1() {
+      document.getElementById("popup1").style.display = "block";
+    }
+    function resolveCard2() {
+      document.getElementById("popup2").style.display = "block";
+    }
+    function resolveCard3() {
+      document.getElementById("popup3").style.display = "block";
+    }
+    function resolveCard4() {
+      document.getElementById("popup4").style.display = "block";
+    }
+    function closePopup1() {
+      document.getElementById("popup1").style.display = "none";
+    }
+    function closePopup2() {
+      document.getElementById("popup2").style.display = "none";
+    }
+    function closePopup3() {
+      document.getElementById("popup3").style.display = "none";
+    }
+    function closePopup4() {
+      document.getElementById("popup4").style.display = "none";
+    }
+    function editCard1() {
+      var newText = document.getElementById("textbox1").value;
+      var newAnswer = document.getElementById("textbox11").value;
+
+      // Find the element to be edited
+      var headingElement = document.getElementById("issue1");
+      // Set the new content
+      headingElement.innerHTML = newText;
+      document.getElementById("answer1").innerHTML = newAnswer;
+      document.getElementById("popup1").style.display = "none";
+    }
+    function editCard2() {
+      var newText = document.getElementById("textbox2").value;
+      var newAnswer = document.getElementById("textbox22").value;
+
+      // Find the element to be edited
+      var headingElement = document.getElementById("issue2");
+      // Set the new content
+      headingElement.innerHTML = newText;
+      document.getElementById("answer2").innerHTML = newAnswer;
+      document.getElementById("popup2").style.display = "none";
+    }
+    function editCard3() {
+      var newText = document.getElementById("textbox3").value;
+      var newAnswer = document.getElementById("textbox33").value;
+
+      // Find the element to be edited
+      var headingElement = document.getElementById("issue3");
+      // Set the new content
+      headingElement.innerHTML = newText;
+      document.getElementById("answer3").innerHTML = newAnswer;
+      document.getElementById("popup3").style.display = "none";
+    }
+    function editCard4() {
+      var newText = document.getElementById("textbox4").value;
+      var newAnswer = document.getElementById("textbox44").value;
+
+      // Find the element to be edited
+      var headingElement = document.getElementById("issue4");
+      // Set the new content
+      headingElement.innerHTML = newText;
+      document.getElementById("answer4").innerHTML = newAnswer;
+      document.getElementById("popup4").style.display = "none";
+    }
+    function createNew() 
+    {
+      document.getElementById("popupnew").style.display = "block";
+    }
+    function closePopupnew()
+    {
+      document.getElementById("popupnew").style.display = "none";
+    }
+    function createCardnew()
+    {
+      var newQ = document.getElementById("textboxnew").value;
+      var newA = document.getElementById("textboxnew2").value;
+      console.log(newQ);
+      var newDiv = document.createElement("div");
+      newDiv.setAttribute("id", "card5");
+      newDiv.setAttribute("class", "card");
+      var cardBody = document.createElement("div");
+      cardBody.setAttribute("class", "cardBody");
+      var newIssue = document.createElement("div");
+      newIssue.setAttribute("class", "Issue");
+      newIssue.setAttribute("id", "issue5");
+      newIssue.innerHTML = newQ;
+      var newAnswer = document.createElement("div");
+      newAnswer.setAttribute("class", "Answer");
+      newAnswer.setAttribute("id", "answer5");
+      newAnswer.innerHTML = newA;
+      var Actions = document.createElement("div");
+      Actions.setAttribute("class", "Actions");
+      var resolveButton = document.createElement("button");
+      resolveButton.setAttribute("id", "resolve5");
+      resolveButton.setAttribute("class", "resolve");
+      resolveButton.innerHTML = "edit";
+      var deleteButton = document.createElement("button");
+      deleteButton.setAttribute("id", "ignore5");
+      deleteButton.setAttribute("class", "ignore");
+      deleteButton.innerHTML = "delete";
+      Actions.appendChild(resolveButton);
+      Actions.appendChild(deleteButton);
+      cardBody.appendChild(newIssue);
+      cardBody.appendChild(newAnswer);
+      cardBody.appendChild(Actions);
+      newDiv.appendChild(cardBody);
+      document.getElementById("allCards").appendChild(newDiv);
+      document.getElementById("popupnew").style.display = "none";
+      console.log(document.getElementById("allCards"));
+    }
+    
+  </script>
+</html>

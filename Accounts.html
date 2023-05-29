@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="sideBar.css" />
+    <link rel="stylesheet" href="Accounts.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="BigBoss">
+      <div id="sideBar">
+        <div id="logoCon">
+          <img id="logo" src="LOGO ROAA.png" />
+        </div>
+        <div class="sideBarItem">
+          <img class="allIcons" src="homeIcon.png" />
+          <a href="main.html">Home</a>
+        </div>
+        <div class="sideBarItem">
+          <img class="allIcons" src="technicalIssueIcon.png" />
+          <a href="techIssue.html">Technical Issues</a>
+        </div>
+        <div class="sideBarItem">
+          <img class="allIcons" src="FAQIcon.png" />
+          <a href="FAQS.html">FAQs</a>
+        </div>
+        <div class="sideBarItem">
+          <img class="allIcons" src="UsersIcon.png" />
+          <a href="Accounts.html">Accounts</a>
+        </div>
+
+        <div class="sideBarItem">
+          <img class="allIcons" src="logOutIcon.png" />
+          <a href="login.html">Logout</a>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card" id="card1">
+            <div class="card-header">#22444:</div>
+            <div class="cardBody">
+              <div class="UserNameBody">User Name: Micho</div>
+              <div  class="UserNameBody"> Role: Banker</div>
+              
+              <div class="Actions">
+                <button id="delete1" onclick="delete1()" class="delete">Delete</button>
+              
+              </div>
+            </div>
+          </div>
+          <div class="card" id="card2">
+            <div class="card-header">#1111112:</div>
+            <div class="cardBody">
+              <div class="UserNameBody">User Name: Omar</div>
+              <div  class="UserNameBody"> Role: Client</div>
+              <div class="Actions">
+                <button id="delete2" onclick="delete2()" class="delete">Delete</button>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="card3">
+            <div class="card-header">#111111225:</div>
+            <div class="cardBody">
+              <div class="UserNameBody">User Name: Khalid</div>
+              <div  class="UserNameBody"> Role: Client</div>
+              <div class="Actions">
+                
+                <button id="delete2" onclick="delete3()" class="delete">Delete</button>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="card4">
+            <div class="card-header">#111111226:</div>
+            <div class="cardBody">
+              <div class="UserNameBody">User Name: Hassan</div>
+              <div  class="UserNameBody"> Role: Client</div>
+              <div class="Actions">
+                <button id="delete2" onclick="delete4()" class="delete">Delete</button>
+              </div>
+            </div>
+          </div>
+
+     </div>
+    </div>
+    </div>
+  </body>
+  <script>
+    function delete1()
+    {
+      document.getElementById("card1").style.display = "none";
+
+
+    }
+    function delete2()
+    {
+      document.getElementById("card2").style.display = "none";
+    }
+    function delete3()
+    {
+      document.getElementById("card3").style.display = "none";
+    }
+    function delete4()
+    {
+      document.getElementById("card4").style.display = "none";
+
+
+    }
+  </script>
+</html>

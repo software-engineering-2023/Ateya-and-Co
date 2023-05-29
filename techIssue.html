@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="sideBar.css" />
+    <link rel="stylesheet" href="techIssue.css" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="BigBoss">
+      <div id="sideBar">
+        <div id="logoCon">
+          <img id="logo" src="LOGO ROAA.png" />
+        </div>
+        <div class="sideBarItem">
+          <img class="allIcons" src="homeIcon.png" />
+          <a href="main.html">Home</a>
+        </div>
+        <div class="sideBarItem">
+          <img class="allIcons" src="technicalIssueIcon.png" />
+          <a href="techIssue.html">Technical Issues</a>
+        </div>
+        <div class="sideBarItem">
+          <img class="allIcons" src="FAQIcon.png" />
+          <a href="FAQS.html">FAQs</a>
+        </div>
+        <div class="sideBarItem">
+          <img class="allIcons" src="UsersIcon.png" />
+          <a href="Accounts.html">Accounts</a>
+        </div>
+        
+        <div class="sideBarItem">
+          <img class="allIcons" src="logOutIcon.png" />
+          <a href="login.html">Logout</a>
+        </div>
+      </div>
+     <div class="grid">
+        <div class="card" id="card1">
+            <div class="card-header">#111111223:</div>
+            
+            <div class="cardBody">
+              <div class="UserNameBody">User Name: Roaa</div>
+              <div class="Issue">Issue: can't change my password.</div>
+              <div class="Actions">
+                <button id="resolve1" onclick="resolveCard1()" class="resolve">Resolve</button>
+                <button id="ignore1" onclick="ignoreCard1()" class="ignore">Ignore</button>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="card2">
+            <div class="card-header">#111111224:</div>
+            <div class="cardBody">
+              <div class="UserNameBody">User Name: Omar</div>
+              <div class="Issue">Issue: can't add a reminder.</div>
+              <div class="Actions">
+                <button id="resolve2" onclick="resolveCard2()" class="resolve">Resolve</button>
+                <button id="ignore2" onclick="ignoreCard2()" class="ignore">Ignore</button>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="card3">
+            <div class="card-header">#111111225:</div>
+            <div class="cardBody">
+              <div class="UserNameBody">User Name: Khalid</div>
+              <div class="Issue">Issue: wants change my profile.</div>
+              <div class="Actions">
+                <button id="resolve3"  onclick="resolveCard3()" class="resolve">Resolve</button>
+                <button id="ignore3" onclick="ignoreCard3()" class="ignore">Ignore</button>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="card4">
+            <div class="card-header">#111111226:</div>
+            <div class="cardBody">
+              <div class="UserNameBody">User Name: Hassan</div>
+              <div class="Issue">Issue: can't delete my accont.</div>
+              <div class="Actions">
+                <button id="resolve4"   onclick="resolveCard4()" class="resolve">Resolve</button>
+                <button id="ignore4"  onclick="ignoreCard4()" class="ignore">Ignore</button>
+              </div>
+            </div>
+          </div>
+
+     </div>
+    </div>
+    <div id="popup1" class="popup">
+        <textarea id="textbox"></textarea>
+        <div>
+            <button onclick="solvePopup1()">Solve</button>
+            <button onclick="closePopup1()">Close</button>
+        </div>
+       
+      </div>
+      <div id="popup2" class="popup">
+        <textarea id="textbox"></textarea>
+        <div>
+            <button onclick="solvePopup2()">Solve</button>
+            <button onclick="closePopup2()">Close</button>
+        </div>
+       
+      </div>
+      <div id="popup3" class="popup">
+        <textarea id="textbox"></textarea>
+        <div>
+            <button onclick="solvePopup3()">Solve</button>
+            <button onclick="closePopup3()">Close</button>
+        </div>
+       
+      </div>
+      <div id="popup4" class="popup">
+        <textarea id="textbox"></textarea>
+        <div>
+            <button onclick="solvePopup4()">Solve</button>
+            <button onclick="closePopup4()">Close</button>
+        </div>
+       
+      </div>
+
+  </body>
+
+  <script>
+    function ignoreCard1() 
+    {
+        document.getElementById("card1").style.display = "none";
+    }
+    function ignoreCard2() 
+    {
+        document.getElementById("card2").style.display = "none";
+    }
+    function ignoreCard3() 
+    {
+        document.getElementById("card3").style.display = "none";
+    }
+    function ignoreCard4() 
+    {
+        document.getElementById("card4").style.display = "none";
+    }
+    function resolveCard1()
+    {
+        document.getElementById("popup1").style.display = "block";
+
+    }
+    function resolveCard2()
+    {
+        document.getElementById("popup2").style.display = "block";
+
+    }
+    function resolveCard3()
+    {
+        document.getElementById("popup3").style.display = "block";
+
+    }
+    function resolveCard4()
+    {
+        document.getElementById("popup4").style.display = "block";
+
+    }
+    function closePopup1()
+    {
+        document.getElementById("popup1").style.display = "none";
+    }
+    function closePopup2()
+    {
+        document.getElementById("popup2").style.display = "none";
+    }
+    function closePopup3()
+    {
+        document.getElementById("popup3").style.display = "none";
+    }
+    function closePopup4()
+    {
+        document.getElementById("popup4").style.display = "none";
+    }
+    function solvePopup1()
+    {
+        document.getElementById("popup1").style.display = "none";
+        document.getElementById("card1").style.display = "none";
+    }
+    function solvePopup2()
+    {
+        document.getElementById("popup2").style.display = "none";
+        document.getElementById("card2").style.display = "none";
+    }
+    function solvePopup3()
+    {
+        document.getElementById("popup3").style.display = "none";
+        document.getElementById("card3").style.display = "none";
+    }
+    function solvePopup4()
+    {
+        document.getElementById("popup4").style.display = "none";
+        document.getElementById("card4").style.display = "none";
+    }
+  </script>
+</html>
+
